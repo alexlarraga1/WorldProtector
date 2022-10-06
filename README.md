@@ -325,5 +325,5 @@ The following features will be implemented first in the 1.18.2 version, but will
 - **A**: Make sure you have at least the OP level defined in your WorldProtector server configuration or enable cheats in your single player world.
 
 
-- **Q**: Why are not all commands with ``/worldprodtector <command>`` working and prompting errors?
-- **A**: JourneyMap also uses the ``/worldprodtector`` command. Try using ``/w-p`` or ``/worldprotector`` instead.
+- **Q**: Why are not all commands with ``/wp <command>`` working and prompting errors?
+- **A**: JourneyMap also uses the ``/wp`` command. Try using ``/w-p`` or ``/worldprotector`` instead.
