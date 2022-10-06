@@ -12,10 +12,10 @@ to a regions which are then allowed to bypass these rules/flags.
 
 ## Older Versions
 
-The port of the 1.16.5 version introduces a lot of new flags, protection features, as well as some QoL
+The port of the 1.18.2 version introduces a lot of new flags, protection features, as well as some QoL
 improvements. This mentioned be aware that some described features below are not present in every version.
 
-Also note that older versions (1.12, 1.14, 1.15) will most likely not be updated with the new features added in 1.16. 
+Also note that older versions (1.12, 1.14, 1.15) will most likely not be updated with the new features added in 1.18. 
 If you are looking for a more up to date version for 1.12 take a look at [WorldDefender](https://www.curseforge.com/minecraft/mc-mods/world-defender) which is a direct fork of WorldProtector. 
 
 ## How to create a region?
@@ -27,26 +27,26 @@ If you are looking for a more up to date version for 1.12 take a look at [WorldD
 
 ### Workflow
 
-The WorldProtector base command is ``/wp`` by default. Alternatively you can also use ``/w-p`` or ``/worldprotector``.
+The WorldProtector base command is ``/worldprotector`` by default. Alternatively you can also use ``/w-p`` or ``/wp``.
 If you have [JourneyMap](https://www.curseforge.com/minecraft/mc-mods/journeymap) installed the default base command will be ``/w-p`` due to JourneyMap using ``/wp`` to create waypoints.
 
 1. Use the Region Marker to mark the two blocks which define the area of the region.
 
-2. [Optional] Expand the Y level (height) of your marked region with the ```/wp expand vert [<Y1>] [<Y2>]``` command (
+2. [Optional] Expand the Y level (height) of your marked region with the ```/worldprodtector expand vert [<Y1>] [<Y2>]``` command (
    default is 0 to 255) or by using the secondary function of the Region Marker (see Region Marker tooltip).
 
 3. [Optional] Set the teleportation target of the region with SHIFT right-click on a block. You can teleport to this
-   region later by using ```/wp region tp <region>```. When not set, a default teleportation position will be
+   region later by using ```/worldprodtector region tp <region>```. When not set, a default teleportation position will be
    calculated.
 
-4. Define your region: ```/wp region define <region>``` or by renaming the Region Marker in an anvil. The regions are
+4. Define your region: ```/worldprodtector region define <region>``` or by renaming the Region Marker in an anvil. The regions are
    saved with their name per dimension. This means you cannot have multiple regions with the same name in the same
    dimension. Defining a region with an already used name will override the existing one.
 
-5. Add flags to your region by using the appropriate command ```/wp flag add <region> <flag name>``` or by using the
+5. Add flags to your region by using the appropriate command ```/worldprodtector flag add <region> <flag name>``` or by using the
    Flag Stick in conjunction with the Region Stick (see Flag Stick and Region Stick tooltips).
 
-6. [Optional] Add players or teams to your region which are allowed to bypass the flags by using the command ````/wp player add <region> <playername>```` or by using the Region Stick (see Region Stick tooltip for more
+6. [Optional] Add players or teams to your region which are allowed to bypass the flags by using the command ````/worldprodtector player add <region> <playername>```` or by using the Region Stick (see Region Stick tooltip for more
    details).
 
 ## Features
@@ -90,43 +90,43 @@ This way you are able to group flags for the same purpose in a container and reu
 
 #### Interactive commands
 
-There are several new QoL-Features available in the more recent versions (2.1.5.1+ repectively 2.1.7.0).
+There are several new QoL-Features available in the more recent versions.
 
 You can use the interactive links (indicated by the colored text) to copy commands into your chat or run them directly with a single click.
 Just hover over the links and read the hints to know what they are doing.
 
 Try it out! I would love to have some feedback. :-)
 
-Note: Journey Map also uses the ``/wp`` command. For this reason WorldProtector offers ``/w-p`` or ``/worldprotector``
+Note: Journey Map also uses the ``/worldprodtector`` command. For this reason WorldProtector offers ``/w-p`` or ``/wp``
 as alternatives.
 
 #### Command overview
 
 Currently, there are four types of commands to manager regions:
 
-- ```/wp region```: Define, update, remove, activate/deactivate, set region priority; List regions, query information,
+- ```/worldprodtector region```: Define, update, remove, activate/deactivate, set region priority; List regions, query information,
   teleport to regions regions;
 
-- ```/wp expand```: allows to modify the Y level (height) of the marked region.
+- ```/worldprodtector expand```: allows to modify the Y level (height) of the marked region.
 
-- ```/wp flag```: allows to define one or several flags (rules) for a region to protect it.
+- ```/worldprodtector flag```: allows to define one or several flags (rules) for a region to protect it.
 
-- ```/wp player```: allows to add/remove players to/from regions
+- ```/worldprodtector player```: allows to add/remove players to/from regions
 
-- ```/wp team```: allows to add/remove teams to/from regions
+- ```/worldprodtector team```: allows to add/remove teams to/from regions
 
-Use ```/wp help``` for more information. Or ```/wp help <command>``` for information about a specific command.
+Use ```/worldprodtector help``` for more information. Or ```/worldprodtector help <command>``` for information about a specific command.
 
 ### Flags
 
 Currently, there are **57 flags** available. Click below to show the complete list.
 
-To add a flag use the command ```/wp flag add <region> <flag>```. To remove a flag from a region
-use ```/wp flag remove <region> <flag>. ```
+To add a flag use the command ```/worldprodtector flag add <region> <flag>```. To remove a flag from a region
+use ```/worldprodtector flag remove <region> <flag>. ```
 
 To add or remove multiple flags at once just separate them with a space between them. 
 
-You are also able to add or remove all flags by using the special flag 'all': ```/wp flag <add|remove> <region> all```
+You are also able to add or remove all flags by using the special flag 'all': ```/worldprodtector flag <add|remove> <region> all```
 
 <details>
   <summary> Flag list (click me):</summary>
@@ -201,7 +201,7 @@ You are also able to add or remove all flags by using the special flag 'all': ``
 ### Region priority / Overlapping regions
 
 If a region is inside another region you have to use the command
-```/wp region set-priority <region> <priority>``` to give a specific region more priority over another. The higher the
+```/worldprodtector region set-priority <region> <priority>``` to give a specific region more priority over another. The higher the
 number, the higher the regions' priority.
 
 Let's suppose that there is a pvp arena in your spawn. Your spawn forbids pvp, but your in your arena you want to have
@@ -211,15 +211,15 @@ possible.
 Therefore, the arena region needs to have a higher priority than the spawn region. The following example show how to
 achieve this:
 
-```/wp region set-priority spawn 1```
+```/worldprodtector region set-priority spawn 1```
 
-```/wp region set-priority arena 2```
+```/worldprodtector region set-priority arena 2```
 
 ### Examples
 
-Gif showing the new command line QoL features introduced in version 1.16.5-2.1.5.1:
+Gif showing the new command line QoL features introduced in version 1.18.2-3.0.0.0:
 
-![Region info quality of life features (1.16.5-2.1.5.1+)](region-qol-features.gif)
+![Region info quality of life features (1.18.2-3.0.0.0+)](region-qol-features.gif)
 
 ## Additional information
 
@@ -231,15 +231,15 @@ Gif showing the new command line QoL features introduced in version 1.16.5-2.1.5
 Found a bug? Or do you have an idea for a new flag or just a general suggestions for the mod?
 
 Don't hesitate to propose them to me. Or even better: Open a
-new [issue](https://github.com/Mosca42/WorldProtector/issues)!
+new [issue](https://github.com/alexlarraga1/WorldProtector/issues)!
 
 ### Special thanks
 
 Thanks to BrokenSwing for his help about regions and safeguard in the world.
 
-Thanks to TheBossMax2 for the mod logo.
-
 Thanks to xEdek_ for the 1.12 fork WorldDefender.
+
+Thanks to z0rdak for the 1.16.5 fork WorldProtector
 
 ### License
 
@@ -261,14 +261,13 @@ Under the following conditions:
 
 ### Links
 
-* [WorldProtector - Discord](https://discord.gg/MsA8XPc)
-* [WorldProtector - Github](https://github.com/Mosca42/WorldProtector)
-* [WorldProtector - Curseforge](https://www.curseforge.com/minecraft/mc-mods/worldprotector)
+* [WorldProtector RE - Github](https://github.com/alexlarraga1/WorldProtector)
+* [WorldProtector RE- Curseforge](https://www.curseforge.com/minecraft/mc-mods/worldprotector-re)
 * [Creative Commons 3.0 Attribution Non-Commercial License](https://creativecommons.org/licenses/by-nc/3.0/)
 
 ## Development roadmap
 
-The following features will be implemented first in the 1.16.5 version, but will also be ported to all future versions.
+The following features will be implemented first in the 1.18.2 version, but will also be ported to all future versions.
 
 1. Flags per dimension
 2. Black- and Whitelist options for regions and dimensions
@@ -313,18 +312,18 @@ The following features will be implemented first in the 1.16.5 version, but will
 - **A**: No. At this time WorldProtector has no Fabric port, but if the demand is big enough, I will consider it.
 
 
-- **Q**: Will the new features of the 1.16.5 version be backported to older versions?
-- **A**: For now I will be focusing on improving the 1.16.5 version as well as porting the mod to newer versions, sorry.
+- **Q**: Will the new features of the 1.18.2 version be backported to older versions?
+- **A**: For now I will be focusing on improving the 1.18.2 version as well as porting the mod to newer versions, sorry.
 
 
 - **Q**: Can you implement a flag for \<your feature here\>?
 - **A**: Maybe. Consider creating an issue on
-  the [WorldProtector Github](https://github.com/Mosca42/WorldProtector/issues) page.
+  the [WorldProtector RE Github](https://github.com/alexlarraga1/WorldProtector/issues) page.
 
 
 - **Q**: Why can't I use the commands provided by WorldProtector?
 - **A**: Make sure you have at least the OP level defined in your WorldProtector server configuration or enable cheats in your single player world.
 
 
-- **Q**: Why are not all commands with ``/wp <command>`` working and prompting errors?
-- **A**: JourneyMap also uses the ``/wp`` command. Try using ``/w-p`` or ``/worldprotector`` instead.
+- **Q**: Why are not all commands with ``/worldprodtector <command>`` working and prompting errors?
+- **A**: JourneyMap also uses the ``/worldprodtector`` command. Try using ``/w-p`` or ``/worldprotector`` instead.
